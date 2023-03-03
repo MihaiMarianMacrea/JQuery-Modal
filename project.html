@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <title>Project</title>
+
+    <script src="jquery.min.js"></script>
+    <script src="project.js"></script>
+
+    <style>
+      .container {
+        width: 90%;
+        margin: 0 auto;
+      }
+
+      div.main {
+        border: 1px solid black;
+        padding: 20px;
+        background-color: aliceblue;
+      }
+
+      label {
+        font-weight: bold;
+        font-size: 20px;
+      }
+
+      .pf,
+      .pf div,
+      .pj div,
+      .container div:first-child,
+      .main,
+      hr {
+        margin-bottom: 20px;
+      }
+
+      input[type="text"] {
+        width: 50%;
+      }
+
+      button {
+        background-color: #72fd72;
+        border: 1px solid gray;
+        font-size: 18px;
+        padding: 6px;
+        font-weight: bold;
+      }
+    </style>
+  </head>
+  <body>
+    <section class="container">
+      <div>
+        <label>Selecteaza o optiune: </label>
+        <input class="choice" type="radio" name="radio" value="pf" />
+        <label class="pf-label">PF</label>
+        <input class="choice" type="radio" name="radio" value="pj" />
+        <label class="pj-label">PJ</label>
+      </div>
+      <div class="main">
+        <div class="pf">
+          <h2>Persoane fizice</h2>
+          <div>
+            <label>Nume: </label> <br />
+            <input type="text" />
+          </div>
+
+          <div>
+            <label>Prenume </label> <br />
+            <input type="text" />
+          </div>
+          <div>
+            <label>Venituri: </label> <br />
+            <input type="text" />
+          </div>
+        </div>
+
+        <hr />
+
+        <div class="pj">
+          <h2>Persoane juridice</h2>
+          <div>
+            <label>Societate: </label> <br />
+            <input type="text" />
+          </div>
+
+          <div>
+            <label>CUI: </label> <br />
+            <input type="text" />
+          </div>
+          <div>
+            <label>Adresa: </label> <br />
+            <input type="text" />
+          </div>
+        </div>
+      </div>
+
+      <div>
+        <button disabled type="button">Trimite</button>
+      </div>
+      <br />
+
+      <div hidden id="info" style="border: 1px solid #ccc; padding: 20px">
+        Valorile completate de catre client sunt:
+        <span id="placeToAppend"> </span>
+      </div>
+    </section>
+  </body>
+</html>
